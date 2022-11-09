@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 21:57:24 by mnummi            #+#    #+#             */
-/*   Updated: 2022/10/30 22:00:23 by mnummi           ###   ########.fr       */
+/*   Updated: 2022/11/09 22:24:10 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 	/* last if -->
 	 *for \0' since we dont get to it on the loop before
 	 * */
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

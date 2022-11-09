@@ -6,13 +6,13 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 20:56:00 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/09 21:02:28 by mnummi           ###   ########.fr       */
+/*   Updated: 2022/11/09 22:24:57 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if (c < 123 && c > 96)
 		return (1);

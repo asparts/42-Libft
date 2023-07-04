@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:13:57 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/04 21:12:24 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/04 23:08:05 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	if (d > s)
 		while (n-- > 0)
-			d[n] = s[d];
+			d[n] = s[i];
 	else
 	{
 		while (i < n)

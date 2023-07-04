@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 20:43:07 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/09 20:54:29 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/04 23:58:09 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ int	ft_atoi(const char *str)
 	int	result;
 	int	i;
 
+	i = 0;
+	sign = 0;
+	result = 0;
 	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
 			|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
 	{

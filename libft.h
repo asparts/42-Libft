@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:10:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/04 23:32:46 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/05 00:23:54 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void*		ft_calloc(size_t nmemb, size_t size);
+char*		ft_strdup(const char *s);
 
 #endif

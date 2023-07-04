@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:23:51 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/06 22:50:42 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/04 21:01:17 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
+	if (!s)
+		return (NULL);
+
 	unsigned char	*cc;
 	unsigned char	*cs;
 	unsigned int	i;

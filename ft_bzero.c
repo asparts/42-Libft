@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 21:51:03 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/06 21:57:19 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/04 20:48:01 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
+
+	if (!s)
+		return ;
 
 	i = 0;
-	while (i <= size_t)
+	while (i < n)
 	{
-		s[i] = '\0';
+		*(char*)(s + i) = 0;
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:13:57 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/06 22:23:19 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/04 21:12:24 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 	char	*d;
 	size_t	i;
+
+	if (!dest || !src)
+		return (NULL);
 
 	s = (char *)src;
 	d = (char *)dest;

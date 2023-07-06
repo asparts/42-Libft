@@ -6,12 +6,12 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 00:38:09 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/05 00:43:39 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/06 18:39:40 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <"libft.h>
+#include "libft.h"
 
 char*	ft_strjoin(char const *s1, char const *s2)
 {

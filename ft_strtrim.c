@@ -6,11 +6,11 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 19:43:02 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/05 20:52:17 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/06 18:39:54 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <"libft.h">
+#include "libft.h"
 
 char*	ft_strtrim(char const *s1, char const *set)
 {

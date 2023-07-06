@@ -6,11 +6,11 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:06:44 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/05 23:16:59 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/06 19:09:48 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <"libft.h">
+#include "libft.h"
 
 static int	ft_abs(int nbr)
 {
@@ -49,7 +49,7 @@ char*	ft_itoa(int n)
 	while (n != 0)
 	{
 		str[len++] = '0' + ft_abs(n % 10);
-		n = n( / 10);
+		n = (n / 10);
 	}
 	if (is_neg)
 		str[len] = '-';

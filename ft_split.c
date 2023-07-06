@@ -6,11 +6,11 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:38:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/05 23:00:35 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/06 18:52:59 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <"ft_split">
+#include "libft.h"
 
 char**	ft_split(char const *s, char c)
 {

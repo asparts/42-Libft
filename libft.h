@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:10:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/06 18:32:21 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/07 05:44:19 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ char*		ft_strtrim(char const *s1, char const *set);
 char**		ft_split(char const *s, char c);
 char*		ft_itoa(int n);
 char*		ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif

@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 00:12:05 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/10 19:56:39 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/10 20:34:13 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*p;
+	char	*p;
+	size_t	i;
 
-	p = (void *)malloc(nmemb * size);
-	if (!p)
+	i = 0;
+	p = malloc(nmemb * size);
+	if (p == NULL || nmemb < 0 || size < 0)
 		return (NULL);
-	ft_bzero(p, nmemb);
+	while (i < nmemb * size)
+	{
+		p[i] = 0;
+		i++;
+	}
 	return (p);
 }

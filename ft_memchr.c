@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:23:51 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/10 22:04:20 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/10 22:30:36 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == to_find)
 		{
 			return (&str[i]);
 		}

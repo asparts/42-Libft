@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 06:03:06 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/07 06:05:36 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/10 23:02:13 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
+		i++;
 	}
 }

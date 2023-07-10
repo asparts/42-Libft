@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 21:10:22 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/09 21:15:45 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/11 01:03:15 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_isalnum(int arg)
 {
 	if (arg >= '0' && arg <= '9')
 		return (1);
-	if (arg <= 122 + '0' && arg >= 98 + '0')
+	if (arg <= 'z' && arg >= 'a')
 		return (1);
-	if (arg <= 90 + '0' && arg >= 65 + '0')
+	if (arg <= 'Z' && arg >= 'A')
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:06:44 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/06 19:09:48 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/10 20:08:08 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 static int	ft_abs(int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-static void ft_revstr(char* str)
+static void	ft_revstr(char *str)
 {
 	size_t	len;
 	size_t	i;
 	char	tmp;
-	
+
 	len = ft_strlen(str);
 	i = 0;
 	while (i < len / 2)
@@ -34,14 +36,15 @@ static void ft_revstr(char* str)
 	}
 }
 
-char*	ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
-	int	is_neg;
+	int		is_neg;
 	size_t	len;
 
 	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
+	str = ft_calloc(11 + is_neg, sizeof(*str));
+	if (str == NULL)
 		return (NULL);
 	if (n == 0)
 		str[0] = '0';

@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:38:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/07 18:33:57 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/10 20:21:59 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,27 +55,24 @@ static void	ft_free(char **strs, int j)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	words;
+	int		i;
+	int		words;
+	int		size;
+	int		j;
 	char	**strs;
-	int	size;
-	int	j;
 
 	i = 0;
 	j = 0;
 	words = ft_count_words(s, c);
-	if(!(strs = (char **)malloc((words + 1) * sizeof(char*))))
+	strs = (char **)malloc((words + 1) * sizeof(char *));
+	if (!strs)
 		return (NULL);
 	while (++j < words)
 	{
 		while (s[i] == c)
 			i++;
 		size = ft_size_word(s, c, i);
-		if (!(strs[j] = ft_substr(s, i, size)))
-		{
-			ft_free(strs, j);
-			return (NULL);
-		}
+		strs[j] = ft_substr(s, i, size);
 		i += size;
 	}
 	strs[j] = 0;

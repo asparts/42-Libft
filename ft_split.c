@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:38:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/10 23:50:43 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/11 01:46:12 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,11 @@ static int	ft_count_words(char const *s, char c)
 
 	i = 0;
 	words = 0;
-	while (s && s[i])
+	while (s[i] != '\0')
 	{
-		if (s[i] != c)
-		{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			words++;
-			while (s[i] != c && s[i])
-				i++;
-		}
-		else
-			i++;
+		i++;
 	}
 	return (words);
 }
@@ -62,17 +57,20 @@ char	**ft_split(char const *s, char c)
 	char	**strs;
 
 	i = 0;
-	j = 0;
+	j = -1;
 	words = ft_count_words(s, c);
 	strs = (char **)malloc((words + 1) * sizeof(char *));
-	if (!strs)
-		return (NULL);
 	while (++j < words)
 	{
 		while (s[i] == c)
 			i++;
 		size = ft_size_word(s, c, i);
 		strs[j] = ft_substr(s, i, size);
+		if (!strs[j])
+		{
+			ft_free(strs, j);
+			return (NULL);
+		}
 		i += size;
 	}
 	strs[j] = 0;

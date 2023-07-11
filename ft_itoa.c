@@ -6,56 +6,42 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:06:44 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/10 20:08:08 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/11 21:07:45 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_abs(int nbr)
+static size_t	get_digits(int n)
 {
-	if (nbr < 0)
-		return (-nbr);
-	return (nbr);
-}
-
-static void	ft_revstr(char *str)
-{
-	size_t	len;
-	size_t	i;
-	char	tmp;
-
-	len = ft_strlen(str);
-	i = 0;
-	while (i < len / 2)
-	{
-		tmp = str[i];
-		str[i] = str[len - i - 1];
-		str[len - i - 1] = tmp;
-		i++;
-	}
+	if (n / 10 == 0)
+		return (1);
+	return (1 + get_digits(n / 10));
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		is_neg;
-	size_t	len;
+	char		*str_num;
+	size_t		digits;
+	long int	num;
 
-	is_neg = (n < 0);
-	str = ft_calloc(11 + is_neg, sizeof(*str));
-	if (str == NULL)
-		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	len = 0;
-	while (n != 0)
+	num = n;
+	digits = get_digits(n);
+	if (n < 0)
 	{
-		str[len++] = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		num *= -1;
+		digits++;
 	}
-	if (is_neg)
-		str[len] = '-';
-	ft_revstr(str);
-	return (str);
+	str_num = (char *)malloc(sizeof(char) * (digits + 1));
+	if (!str_num)
+		return (NULL);
+	*(str_num + digits) = 0;
+	while (digits--)
+	{
+		*(str_num + digits) = num % 10 + '0';
+		num = num / 10;
+	}
+	if (n < 0)
+		*(str_num + 0) = '-';
+	return (str_num);
 }

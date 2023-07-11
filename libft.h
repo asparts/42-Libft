@@ -6,14 +6,15 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:10:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/11 18:06:07 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/11 20:38:35 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <unistd.h>
-# include <stdlib.h>
+# include <unistd.h> //FOR WRITE
+# include <stdlib.h> //FOR SIZE_T
+# include <stdint.h> //for SIZE_MAX
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

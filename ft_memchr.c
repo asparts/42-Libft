@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:23:51 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/10 22:30:36 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 10:01:05 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		{
 			return (&str[i]);
 		}
-	i++;
+		i++;
 	}
 	return (NULL);
 }

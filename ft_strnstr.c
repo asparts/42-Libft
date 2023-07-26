@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 21:55:48 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/11 00:54:21 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 10:01:52 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 					return ((char *)&big[i]);
 			}
 		}
-	i++;
+		i++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 21:56:22 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/26 11:14:28 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 12:14:30 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		*(char *)(dest + i) = *(char *)(src + i);

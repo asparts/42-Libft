@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 18:27:09 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/07 06:20:51 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 11:16:56 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
+	if (!str)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		str[i] = f(i, s[i]);

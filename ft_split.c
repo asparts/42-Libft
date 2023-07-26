@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:38:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/11 01:46:12 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 11:21:59 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	j = -1;
 	words = ft_count_words(s, c);
 	strs = (char **)malloc((words + 1) * sizeof(char *));
+	if (!strs)
+		return (NULL);
 	while (++j < words)
 	{
 		while (s[i] == c)

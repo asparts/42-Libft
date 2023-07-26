@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 21:55:48 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/26 10:01:52 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 11:10:35 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!big || !little)
-		return (NULL);
 	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len)

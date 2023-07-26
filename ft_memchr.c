@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:23:51 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/26 10:01:05 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 11:09:28 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	to_find;
 	size_t			i;
 
-	if (!s)
-		return (NULL);
 	str = (unsigned char *)s;
 	to_find = (unsigned char)c;
 	i = 0;

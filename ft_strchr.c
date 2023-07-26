@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 21:57:24 by mnummi            #+#    #+#             */
-/*   Updated: 2022/11/09 22:24:10 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/26 11:07:49 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (s[i])
 	{

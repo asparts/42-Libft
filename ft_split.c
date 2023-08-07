@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:38:23 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/26 11:46:30 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/08/07 18:47:35 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	ft_free(char **strs, int j)
 	free(strs);
 }
 
-static void	write_split(char **strs, char *s, char c, int words)
+static void	write_split(char **strs, const char *s, char c, int words)
 {
 	int		i;
 	int		size;
@@ -65,7 +65,7 @@ static void	write_split(char **strs, char *s, char c, int words)
 		if (!strs[j])
 		{
 			ft_free(strs, j);
-			return (NULL);
+			return ;
 		}
 		i += size;
 	}

@@ -60,12 +60,13 @@ The library includes a variety of functions categorized as follows:
 - `ft_putnbr_fd`
 
 ## 🗂️ Project Structure
+```
 42-Libft/
 ├── ft_*.c          # Individual function implementations
 ├── libft.h         # Header file with function prototypes
 ├── Makefile        # Build script
 └── README.md       # Project documentation
-
+```
 ## ⚙️ Getting Started
 
 ### 📋 Prerequisites
